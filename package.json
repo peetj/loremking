@@ -1,0 +1,59 @@
+{
+  "name": "loremking",
+  "displayName": "Lorem King",
+  "description": "Lorem Ipsum text but from the writing of Stephen King. The text 'deadzone' is replaced with a quote from a Stephen King novel.",
+  "version": "1.0.0",
+  "publisher": "Nexgen STEM School",
+  "author": "Pete Januarius",
+  "keywords": ["Lorem", "Ipsum", "placeholder", "text", "Stephen King", "quotes"],
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:html"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "loremking.insertQuote",
+      "title": "Insert Stephen King Quote",
+      "category": "LoremKing"
+    }],
+    "languages": [
+      {
+        "id": "javascript",
+        "extensions": [".js", ".jsx"],
+        "aliases": ["JavaScript", "javascript"]
+      },
+      {
+        "id": "html",
+        "extensions": [".html", ".htm"],
+        "aliases": ["HTML", "html"]
+      }
+    ],
+    "completionItemProvider": [
+      {
+        "language": "javascript",
+        "triggerCharacters": ["l"]
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.92.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}
