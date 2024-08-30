@@ -5,6 +5,10 @@
   "version": "1.0.0",
   "publisher": "Nexgen STEM School",
   "author": "Pete Januarius",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peetj/loremking"
+  },
   "keywords": ["Lorem", "Ipsum", "placeholder", "text", "Stephen King", "quotes"],
   "engines": {
     "vscode": "^1.92.0"
