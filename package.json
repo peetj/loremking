@@ -2,9 +2,10 @@
   "name": "loremking",
   "displayName": "Lorem King",
   "description": "Lorem Ipsum text but from the writing of Stephen King. The text 'deadzone' is replaced with a quote from a Stephen King novel.",
-  "version": "1.0.0",
-  "publisher": "Nexgen STEM School",
+  "version": "1.0.1",
+  "publisher": "NexgenSTEMSchool",
   "author": "Pete Januarius",
+  "icon": "nexgen_logo_2024.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/peetj/loremking"
