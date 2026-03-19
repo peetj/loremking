@@ -1,0 +1,92 @@
+[
+  {
+    "text": "Monsters are real, and ghosts are real too. They live inside us, and sometimes, they win.",
+    "mode": "quote",
+    "source": "Stephen King",
+    "tags": ["fear", "human-nature"]
+  },
+  {
+    "text": "The man in black fled across the desert, and the gunslinger followed.",
+    "mode": "quote",
+    "source": "The Dark Tower: The Gunslinger",
+    "tags": ["adventure", "pursuit"]
+  },
+  {
+    "text": "Books are a uniquely portable magic, able to transport us to other worlds and times, making us feel alive in new ways.",
+    "mode": "quote",
+    "source": "On Writing",
+    "tags": ["books", "magic"]
+  },
+  {
+    "text": "Hope is a good thing, maybe the best of things, and no good thing ever dies. It keeps us going even in the darkest times.",
+    "mode": "quote",
+    "source": "The Shawshank Redemption",
+    "tags": ["hope", "perseverance"]
+  },
+  {
+    "text": "We all float down here, and when you're down here with us, you'll float too.",
+    "mode": "quote",
+    "source": "It",
+    "tags": ["horror", "iconic"]
+  },
+  {
+    "text": "The scariest moment is always just before you start. After that, things can only get better.",
+    "mode": "quote",
+    "source": "On Writing",
+    "tags": ["courage", "writing"]
+  },
+  {
+    "text": "Sometimes dead is better. The soil of a man's heart is stonier, but sometimes, the land doesn't forgive.",
+    "mode": "quote",
+    "source": "Pet Sematary",
+    "tags": ["death", "grief"]
+  },
+  {
+    "text": "Get busy living, or get busy dying. It's a choice we make every day, in big ways and small.",
+    "mode": "quote",
+    "source": "The Shawshank Redemption",
+    "tags": ["life", "choice"]
+  },
+  {
+    "text": "I am the literary equivalent of a Big Mac and fries, something that's always there when you need it.",
+    "mode": "quote",
+    "source": "Stephen King",
+    "tags": ["humor", "self-deprecation"]
+  },
+  {
+    "text": "There's no harm in hoping for the best as long as you're prepared for the worst.",
+    "mode": "quote",
+    "source": "Stephen King",
+    "tags": ["hope", "pragmatism"]
+  },
+  {
+    "text": "Talent is cheaper than table salt. What separates the talented individual from the successful one is a lot of hard work.",
+    "mode": "quote",
+    "source": "Stephen King",
+    "tags": ["writing", "work"]
+  },
+  {
+    "text": "People who try hard to do the right thing always seem mad.",
+    "mode": "quote",
+    "source": "The Stand",
+    "tags": ["morality", "perception"]
+  },
+  {
+    "text": "The trust of the innocent is the liar's most useful tool.",
+    "mode": "quote",
+    "source": "Needful Things",
+    "tags": ["trust", "deception"]
+  },
+  {
+    "text": "Time takes it all, whether you want it to or not.",
+    "mode": "quote",
+    "source": "The Green Mile",
+    "tags": ["time", "loss"]
+  },
+  {
+    "text": "A short story is a different thing altogether — a short story is like a quick kiss in the dark from a stranger.",
+    "mode": "quote",
+    "source": "Skeleton Crew",
+    "tags": ["writing", "stories"]
+  }
+]

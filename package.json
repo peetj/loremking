@@ -1,8 +1,8 @@
 {
   "name": "loremking",
   "displayName": "Lorem King",
-  "description": "Lorem Ipsum text but from the writing of Stephen King. The text 'deadzone' is replaced with a quote from a Stephen King novel.",
-  "version": "1.0.1",
+  "description": "Horror-themed placeholder text generator inspired by Stephen King. Three content modes, flexible text generation, and the classic 'deadzone' trigger.",
+  "version": "2.0.0",
   "publisher": "NexgenSTEMSchool",
   "author": "Pete Januarius",
   "icon": "nexgen_logo_2024.png",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/peetj/loremking"
   },
-  "keywords": ["Lorem", "Ipsum", "placeholder", "text", "Stephen King", "quotes"],
+  "keywords": ["Lorem", "Ipsum", "placeholder", "text", "Stephen King", "quotes", "horror", "generator"],
   "engines": {
     "vscode": "^1.92.0"
   },
@@ -23,11 +23,48 @@
   ],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "loremking.insertQuote",
-      "title": "Insert Stephen King Quote",
-      "category": "LoremKing"
-    }],
+    "commands": [
+      {
+        "command": "loremking.insertQuote",
+        "title": "Lorem King: Insert Quote"
+      },
+      {
+        "command": "loremking.generateCustom",
+        "title": "Lorem King: Generate Custom Text"
+      },
+      {
+        "command": "loremking.replaceSelection",
+        "title": "Lorem King: Replace Selection with Lorem King Text"
+      }
+    ],
+    "configuration": {
+      "title": "Lorem King",
+      "properties": {
+        "loremKing.defaultMode": {
+          "type": "string",
+          "default": "quote",
+          "enum": ["quote", "king-ipsum", "creepy-placeholder"],
+          "enumDescriptions": [
+            "Stephen King quotes with optional attribution",
+            "Horror-flavored literary lorem ipsum",
+            "Short eerie placeholder text for mockups"
+          ],
+          "description": "Default content mode for text generation."
+        },
+        "loremKing.defaultParagraphCount": {
+          "type": "integer",
+          "default": 3,
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Default number of paragraphs when generating by paragraphs."
+        },
+        "loremKing.includeAttribution": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include source attribution when inserting quotes."
+        }
+      }
+    },
     "languages": [
       {
         "id": "javascript",
@@ -38,12 +75,6 @@
         "id": "html",
         "extensions": [".html", ".htm"],
         "aliases": ["HTML", "html"]
-      }
-    ],
-    "completionItemProvider": [
-      {
-        "language": "javascript",
-        "triggerCharacters": ["l"]
       }
     ]
   },
