@@ -380,20 +380,47 @@ Or uninstall from the Extensions sidebar in VS Code.
 
 ## Publishing to the VS Code Marketplace
 
+### Important links
+
+Keep these bookmarked — they are not easy to find through normal navigation:
+
+| Link | Purpose |
+|------|---------|
+| [Publisher Management](https://marketplace.visualstudio.com/manage/publishers/NexgenSTEMSchool) | Manage your published extensions, view installs, update listings |
+| [Azure DevOps Org Setup](https://aex.dev.azure.com) | Create or manage your Azure DevOps organization (required for PATs) |
+| [Marketplace Listing](https://marketplace.visualstudio.com/items?itemName=NexgenSTEMSchool.loremking) | Public extension page on the Marketplace |
+
+### Finding your account (if you forget)
+
+If you cannot remember which Microsoft account is tied to your publisher:
+
+1. **Search your email inboxes** for `"Visual Studio Marketplace"` or `"NexgenSTEMSchool"` or `"Azure DevOps"`
+2. The email that has results is the account you used — it will usually contain a link to the publisher management page
+3. Sign in with that account at [marketplace.visualstudio.com/manage](https://marketplace.visualstudio.com/manage)
+4. You should see your publisher and extensions listed
+
+**Do not** go to `portal.azure.com` — that is the Azure Portal (cloud infrastructure), which is a completely separate product from Azure DevOps. They share the same login but are different sites.
+
 ### Setting up Marketplace access (one-time)
 
-1. **Create an Azure DevOps organization** at [dev.azure.com](https://dev.azure.com) if you do not have one
+1. **Sign in to your publisher page** at [marketplace.visualstudio.com/manage/publishers/NexgenSTEMSchool](https://marketplace.visualstudio.com/manage/publishers/NexgenSTEMSchool) — verify you can see the Lorem King extension listed
 
-2. **Create a Personal Access Token (PAT):**
-   - Go to Azure DevOps → User Settings → Personal Access Tokens
-   - Click "New Token"
+2. **Create or access your Azure DevOps organization:**
+   - Go to [aex.dev.azure.com](https://aex.dev.azure.com) and sign in with the **same Microsoft account** as your publisher
+   - If you already have an organization, it will be listed. If not, create one (any name is fine)
+   - Once you are inside your organization, go to `dev.azure.com/<your-org>`
+
+3. **Create a Personal Access Token (PAT):**
+   - In Azure DevOps, click the **User Settings icon** (small person/gear icon next to your avatar in the **top right**)
+   - Click **Personal access tokens**
+   - Click **"New Token"**
    - Set the name to something like `vsce-loremking`
-   - Set the organization to "All accessible organizations"
-   - Set the expiration (max 1 year)
+   - Set the organization to **"All accessible organizations"**
+   - Set the expiration to the maximum (1 year) — set a calendar reminder to renew it before it expires
    - Under Scopes, select **Custom defined**, then find and check **Marketplace → Manage**
    - Click Create and **copy the token immediately** (you cannot view it again)
 
-3. **Log in with vsce:**
+4. **Log in with vsce:**
 
    ```bash
    vsce login NexgenSTEMSchool
@@ -409,6 +436,24 @@ Or uninstall from the Extensions sidebar in VS Code.
    ****************************************************
    The Personal Access Token verification succeeded for the publisher 'NexgenSTEMSchool'.
    ```
+
+5. **Verify everything is connected:**
+
+   ```bash
+   vsce verify-pat NexgenSTEMSchool
+   ```
+
+   If this succeeds, you are ready to publish. If it fails, your PAT may be missing the Marketplace scope — create a new one with the correct permissions.
+
+### Renewing an expired PAT
+
+PATs expire (max 1 year). When yours expires:
+
+1. `vsce publish` will fail with an authorization error
+2. Go to Azure DevOps → User Settings → Personal access tokens
+3. You will see your old expired token listed
+4. Create a new token with the same settings as above
+5. Run `vsce login NexgenSTEMSchool` again with the new token
 
 ### Publishing a new version
 
