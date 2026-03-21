@@ -1,6 +1,8 @@
 .vscode/**
 .vscode-test/**
 test/**
+node_modules/**
+.git/**
 .gitignore
 .yarnrc
 vsc-extension-quickstart.md
@@ -11,3 +13,5 @@ vsc-extension-quickstart.md
 *.vsix
 *.code-workspace
 .claude/**
+docs/RELEASE_GUIDE.md
+docs/DEVELOPER_GUIDE.md
